@@ -51,14 +51,12 @@ include 'partials/header.php';
                     </div>
                 </div>
             </div>
-            
-            <div class="mission-visual">
-                <div class="visual-elements">
-                    <div class="element element-1"></div>
-                    <div class="element element-2"></div>
-                    <div class="element element-3"></div>
-                </div>
+        <div class="mission-aside">
+            <div class="mission-aside-image">
+                <img src="/img/mission-portrait.webp" alt="Команда Navitroxa за работой" loading="lazy">
             </div>
+            <p class="mission-aside-caption">Научный подход и командная работа</p>
+        </div>
         </div>
     </div>
 </section>
@@ -75,10 +73,10 @@ include 'partials/header.php';
         <div class="team-grid">
             <div class="team-member" data-animate>
                 <div class="member-photo">
-                    <img src="/img/team-1.webp" alt="Алексей Петров - CEO" loading="lazy">
+                    <img src="/img/team-1.webp" alt="Иван Петров — CEO" loading="lazy">
                 </div>
                 <div class="member-info">
-                    <h3 class="member-name">Алексей Петров</h3>
+                    <h3 class="member-name">Иван Петров</h3>
                     <p class="member-position">CEO & Основатель</p>
                     <p class="member-bio">
                         7 лет в e-commerce, экс-Head of Growth в ведущих IT-компаниях. 
@@ -89,10 +87,10 @@ include 'partials/header.php';
             
             <div class="team-member" data-animate>
                 <div class="member-photo">
-                    <img src="/img/team-2.webp" alt="Мария Иванова - CRO Director" loading="lazy">
+                    <img src="/img/team-2.webp" alt="Мария Георгиева — CRO Director" loading="lazy">
                 </div>
                 <div class="member-info">
-                    <h3 class="member-name">Мария Иванова</h3>
+                    <h3 class="member-name">Мария Георгиева</h3>
                     <p class="member-position">CRO Director</p>
                     <p class="member-bio">
                         Сертифицированный специалист по оптимизации конверсии. 
@@ -103,10 +101,10 @@ include 'partials/header.php';
             
             <div class="team-member" data-animate>
                 <div class="member-photo">
-                    <img src="/img/team-3.webp" alt="Дмитрий Козлов - Tech Lead" loading="lazy">
+                    <img src="/img/team-3.webp" alt="Димитър Костов — Tech Lead" loading="lazy">
                 </div>
                 <div class="member-info">
-                    <h3 class="member-name">Дмитрий Козлов</h3>
+                    <h3 class="member-name">Димитър Костов</h3>
                     <p class="member-position">Tech Lead</p>
                     <p class="member-bio">
                         Full-stack разработчик с опытом в машинном обучении. 
@@ -282,6 +280,66 @@ include 'partials/header.php';
             </div>
         </div>
     </div>
+</section>
+
+<section class="differentiators-section" id="why-navitroxa">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Почему выбирают Navitroxa</h2>
+            <p class="section-subtitle">Сочетаем научный подход, высокую скорость внедрения и измеримый результат</p>
+        </div>
+
+        <div class="differentiators-grid">
+            <div class="diff-card" data-animate>
+                <div class="diff-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V4"/><path d="M5 12H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/><path d="M19 12h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2"/></svg>
+                </div>
+                <h3 class="diff-title">R&D и тестирование</h3>
+                <p class="diff-text">Собственная лаборатория гипотез и библиотека паттернов. Проводим 200+ A/B‑тестов в год, быстро масштабируем победителей.</p>
+                <div class="diff-badges">
+                    <span class="diff-badge">A/B</span>
+                    <span class="diff-badge">MVT</span>
+                    <span class="diff-badge">UX Lab</span>
+                </div>
+            </div>
+
+            <div class="diff-card" data-animate>
+                <div class="diff-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M1.05 12a11 11 0 0 1 21.9 0"/><path d="M3.5 19a11 11 0 0 0 17 0"/></svg>
+                </div>
+                <h3 class="diff-title">Данные и интеграции</h3>
+                <p class="diff-text">Сквозная аналитика без пропусков событий. 40+ коннекторов, реальное время и атрибуция для управленческих решений.</p>
+                <div class="diff-badges">
+                    <span class="diff-badge">Realtime</span>
+                    <span class="diff-badge">Attribution</span>
+                    <span class="diff-badge">ETL</span>
+                </div>
+            </div>
+
+            <div class="diff-card" data-animate>
+                <div class="diff-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11H1l8-8 8 8h-8z"/><circle cx="12" cy="14" r="3"/><path d="M12 14v7"/></svg>
+                </div>
+                <h3 class="diff-title">Скорость внедрения</h3>
+                <p class="diff-text">Первые быстрые победы в течение 2–4 недель. Спринт‑подход, параллельная работа над гипотезами и автоворонками.</p>
+                <div class="diff-badges">
+                    <span class="diff-badge">Sprint</span>
+                    <span class="diff-badge">Playbooks</span>
+                    <span class="diff-badge">Automation</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="diff-stats">
+            <div class="diff-stat"><span class="num">98%</span><span class="lbl">продлений</span></div>
+            <div class="diff-stat"><span class="num">40+</span><span class="lbl">коннекторов</span></div>
+            <div class="diff-stat"><span class="num">200+</span><span class="lbl">тестов/год</span></div>
+            <div class="diff-stat"><span class="num">4.9</span><span class="lbl">оценка</span></div>
+        </div>
+    </div>
+
+    <div class="diff-decor diff-decor-1" aria-hidden="true"></div>
+    <div class="diff-decor diff-decor-2" aria-hidden="true"></div>
 </section>
 
 <?php include 'partials/footer.php'; ?>
