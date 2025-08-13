@@ -346,6 +346,7 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(0.2);
 }
 
 .page-hero-overlay {
@@ -2400,6 +2401,57 @@ align-items: center;
     font-size: 1.2rem;
     padding: 0.75rem 1.5rem;
 }
+}
+/* Footer responsive fixes for tablets and desktop */
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 2.5rem;
+    }
+
+    .footer-bottom-content {
+        flex-direction: row;
+        text-align: left;
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .footer-brand {
+        max-width: 420px;
+    }
+}
+/* Contacts desktop layout */
+@media (min-width: 1024px) {
+    /* Stack main contact columns so the form is below */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+
+    /* Inside the details: place contact-items and working-hours side-by-side */
+    .contact-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 3rem;
+        align-items: start;
+    }
+
+    .contact-details .section-title,
+    .contact-details .contact-description {
+        grid-column: 1 / -1;
+    }
+
+    /* Center the form below, keep it reasonably narrow */
+    .contact-form-container {
+        max-width: 720px;
+        margin: 0 auto;
+    }
 }
 /* Print Styles */
 @media print {

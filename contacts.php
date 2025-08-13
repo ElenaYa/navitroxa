@@ -20,6 +20,66 @@ include 'partials/header.php';
         </div>
     </div>
 </section>
+<section class="consultation-benefits-section" id="consultation-benefits">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Что вы получите на консультации</h2>
+        </div>
+        
+        <div class="benefits-consultation-grid">
+            <div class="benefit-consultation-item" data-animate>
+                <div class="benefit-consultation-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                </div>
+                <h4>30 минут экспертного времени</h4>
+                <p>Персональная консультация с экспертом по оптимизации продаж</p>
+            </div>
+            
+            <div class="benefit-consultation-item" data-animate>
+                <div class="benefit-consultation-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 11H1l8-8 8 8h-8z"/>
+                        <circle cx="12" cy="14" r="3"/>
+                        <path d="M12 14v7"/>
+                    </svg>
+                </div>
+                <h4>Экспресс-аудит сайта</h4>
+                <p>Быстрый анализ основных проблем и точек роста</p>
+            </div>
+            
+            <div class="benefit-consultation-item" data-animate>
+                <div class="benefit-consultation-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 3v18h18"/>
+                        <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                    </svg>
+                </div>
+                <h4>План роста конверсии</h4>
+                <p>Персональные рекомендации для увеличения продаж</p>
+            </div>
+            
+            <div class="benefit-consultation-item" data-animate>
+                <div class="benefit-consultation-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 9.95 9 11 5.16-1.05 9-5.45 9-11V7l-10-5z"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                </div>
+                <h4>Оценка потенциала</h4>
+                <p>Прогноз возможного роста продаж в вашей нише</p>
+            </div>
+        </div>
+        
+        <div class="consultation-cta">
+            <p class="consultation-guarantee">
+                <strong>100% бесплатно.</strong> Никаких скрытых платежей или обязательств.
+            </p>
+        </div>
+    </div>
+</section>
 
 <section class="contact-info-section" id="contact-info">
     <div class="container">
@@ -41,7 +101,7 @@ include 'partials/header.php';
                         </div>
                         <div class="contact-content">
                             <h4>Адрес офиса</h4>
-                            <p>бул. „Васил Левски" 150<br>1504 София, Болгария</p>
+                            <p><a href="https://maps.app.goo.gl/yfySyeT1ihuyVXiX8" target="_blank">бул. „Васил Левски" 150<br>1504 София, Болгария</a></p>
                         </div>
                     </div>
                     
@@ -155,75 +215,11 @@ include 'partials/header.php';
     </div>
     
     <div class="map-container">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.5234567890123!2d23.3419!3d42.7006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8682cb317bf5%3A0x400a01269bf5e60!2sVasil%20Levski%20Blvd%20150%2C%201504%20Sofia%2C%20Bulgaria!5e0!3m2!1sen!2sbg!4v1234567890123"
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Офис Navitroxa в Софии">
-        </iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2931.990628594405!2d23.333355599999997!3d42.70391920000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85634b2e834b%3A0x4816dfa9e49b7fae!2sSofia%20Center%2C%20Vasil%20Levski%20Blvd%20150%2C%201527%20Sofia%2C%20Bulgaria!5e0!3m2!1sen!2sua!4v1755082891354!5m2!1sen!2sua"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
 
-<section class="consultation-benefits-section" id="consultation-benefits">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Что вы получите на консультации</h2>
-        </div>
-        
-        <div class="benefits-consultation-grid">
-            <div class="benefit-consultation-item" data-animate>
-                <div class="benefit-consultation-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <polyline points="12,6 12,12 16,14"/>
-                    </svg>
-                </div>
-                <h4>30 минут экспертного времени</h4>
-                <p>Персональная консультация с экспертом по оптимизации продаж</p>
-            </div>
-            
-            <div class="benefit-consultation-item" data-animate>
-                <div class="benefit-consultation-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 11H1l8-8 8 8h-8z"/>
-                        <circle cx="12" cy="14" r="3"/>
-                        <path d="M12 14v7"/>
-                    </svg>
-                </div>
-                <h4>Экспресс-аудит сайта</h4>
-                <p>Быстрый анализ основных проблем и точек роста</p>
-            </div>
-            
-            <div class="benefit-consultation-item" data-animate>
-                <div class="benefit-consultation-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M3 3v18h18"/>
-                        <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
-                    </svg>
-                </div>
-                <h4>План роста конверсии</h4>
-                <p>Персональные рекомендации для увеличения продаж</p>
-            </div>
-            
-            <div class="benefit-consultation-item" data-animate>
-                <div class="benefit-consultation-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2L2 7v10c0 5.55 3.84 9.95 9 11 5.16-1.05 9-5.45 9-11V7l-10-5z"/>
-                        <path d="M9 12l2 2 4-4"/>
-                    </svg>
-                </div>
-                <h4>Оценка потенциала</h4>
-                <p>Прогноз возможного роста продаж в вашей нише</p>
-            </div>
-        </div>
-        
-        <div class="consultation-cta">
-            <p class="consultation-guarantee">
-                <strong>100% бесплатно.</strong> Никаких скрытых платежей или обязательств.
-            </p>
-        </div>
-    </div>
-</section>
+
 
 <section class="faq-section" id="faq">
     <div class="container">
