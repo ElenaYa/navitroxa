@@ -5,7 +5,10 @@
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-brand">
-                        <h3 class="footer-logo">Navitroxa</h3>
+                        <h3 class="footer-logo">
+                            <img src="/img/logo-nav.png" alt="Navitroxa" class="logo-image" width="24" height="24">
+                            Navitroxa
+                        </h3>
                         <p class="footer-description">
                             Эксперты по оптимизации продаж онлайн-бизнеса. 
                             Превращаем посетителей в клиентов, а клиентов — в постоянных покупателей.

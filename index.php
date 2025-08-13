@@ -69,8 +69,14 @@ include 'partials/header.php';
                 <h3 class="benefit-title">Гарантированный результат</h3>
                 <p class="benefit-description">
                     Работаем на результат с гарантией увеличения конверсии 
-                    минимум на 40% или возвращаем деньги
+                    минимум на 40% или возвращаем деньги. Фиксируем KPI и сроки 
+                    в договоре, обеспечиваем прозрачную отчётность и контроль прогресса.
                 </p>
+                <ul class="benefit-points">
+                    <li>Договорная гарантия результата</li>
+                    <li>Отчётность по метрикам каждую неделю</li>
+                    <li>Фокус на ROI и бизнес‑целях</li>
+                </ul>
             </div>
             
             <div class="benefit-card" data-animate>
@@ -82,8 +88,14 @@ include 'partials/header.php';
                 <h3 class="benefit-title">Научный подход</h3>
                 <p class="benefit-description">
                     Каждое решение основано на данных, A/B-тестировании 
-                    и проверенных методологиях оптимизации
+                    и проверенных методологиях оптимизации. Исследуем поведение 
+                    пользователей, формируем гипотезы и подтверждаем их экспериментами.
                 </p>
+                <ul class="benefit-points">
+                    <li>UX‑исследования и карты поведения</li>
+                    <li>A/B и мультивариантные тесты</li>
+                    <li>Приоритизация гипотез по ICE</li>
+                </ul>
             </div>
             
             <div class="benefit-card" data-animate>
@@ -96,8 +108,14 @@ include 'partials/header.php';
                 <h3 class="benefit-title">Полная автоматизация</h3>
                 <p class="benefit-description">
                     Настраиваем системы, которые работают 24/7, 
-                    увеличивая продажи без вашего участия
+                    увеличивая продажи без вашего участия. Интегрируем CRM, 
+                    автоворонки и чат‑ботов для ускорения цикла сделки.
                 </p>
+                <ul class="benefit-points">
+                    <li>CRM и сквозная аналитика</li>
+                    <li>Автоворонки Email/SMS/мессенджеры</li>
+                    <li>Чат‑боты и триггерные сценарии</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -108,7 +126,7 @@ include 'partials/header.php';
     <div class="container">
         <div class="stats-grid">
             <div class="stat-big" data-animate>
-                <div class="stat-number-big">42М₽</div>
+                <div class="stat-number-big">42%</div>
                 <div class="stat-label-big">Дополнительной прибыли принесли клиентам</div>
             </div>
             <div class="stat-big" data-animate>
@@ -187,6 +205,73 @@ include 'partials/header.php';
             <div class="client-type">SaaS</div>
             <div class="client-type">Финтех</div>
             <div class="client-type">Образование</div>
+        </div>
+    </div>
+</section>
+
+<section class="longform-section" id="about-longform">
+    <div class="container">
+        <div class="longform-content">
+            <div class="longform-image">
+                <img src="/img/longform-hero.webp" alt="Современная команда за работой над ростом конверсии" loading="lazy">
+            </div>
+            <h2 class="section-title">Философия Navitroxa</h2>
+            <p class="longform-text">
+                Мы верим, что устойчивый рост — это результат системной работы на стыке данных, 
+                дизайна и технологии. Не делаем «косметику»: мы тщательно изучаем поведение 
+                пользователей, строим гипотезы на основе исследований и подтверждаем решения 
+                экспериментами. Такой подход позволяет находить неочевидные точки роста, 
+                повышать конверсию на десятки процентов и удерживать результаты надолго. 
+                Наша цель — внедрять изменения быстро, измеримо и предсказуемо, чтобы каждая 
+                инвестиция в оптимизацию окупалась и масштабировала ваш бизнес.
+            </p>
+        </div>
+    </div>
+    <div class="longform-decor" aria-hidden="true"></div>
+    <div class="longform-decor longform-decor-2" aria-hidden="true"></div>
+</section>
+
+<section class="features-slider-section" id="features-slider">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Что вы получаете</h2>
+            <p class="section-subtitle">Ключевые преимущества сотрудничества с нами</p>
+        </div>
+
+        <div class="features-tabs">
+            <button class="features-tab active" data-panel="analytics">Аналитика</button>
+            <button class="features-tab" data-panel="quickwins">Быстрые победы</button>
+            <button class="features-tab" data-panel="automation">Автоматизация</button>
+        </div>
+
+        <div class="features-panels">
+            <div class="feature-panel active" data-id="analytics">
+                <div class="slide-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V4"/><path d="M5 12H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/><path d="M19 12h2a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2"/></svg>
+                </div>
+                <div class="slide-text">
+                    <h3>Прозрачная аналитика</h3>
+                    <p>Сквозные метрики и realtime‑дашборды: решения опираются на факты, а не догадки.</p>
+                </div>
+            </div>
+            <div class="feature-panel" data-id="quickwins">
+                <div class="slide-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11H1l8-8 8 8h-8z"/><circle cx="12" cy="14" r="3"/><path d="M12 14v7"/></svg>
+                </div>
+                <div class="slide-text">
+                    <h3>Быстрые победы</h3>
+                    <p>Запускаем изменения спринтами. Первые результативные улучшения — за 2–4 недели.</p>
+                </div>
+            </div>
+            <div class="feature-panel" data-id="automation">
+                <div class="slide-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                </div>
+                <div class="slide-text">
+                    <h3>Автоматизация</h3>
+                    <p>Автоворонки, чат‑боты, CRM — сокращают CAC и ускоряют путь клиента.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>

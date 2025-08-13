@@ -200,39 +200,7 @@ include 'partials/header.php';
             </div>
 
             <div class="legal-section">
-                <h2>5. Управление cookie</h2>
-                
-                <h3>5.1 Настройки на сайте</h3>
-                <p>
-                    Вы можете управлять настройками cookie с помощью баннера, который появляется 
-                    при первом посещении сайта, или изменить настройки в любое время:
-                </p>
-                <div class="cookie-settings">
-                    <button class="btn btn-primary" onclick="showCookieSettings()">
-                        Управление настройками cookie
-                    </button>
-                </div>
-
-                <h3>5.2 Настройки браузера</h3>
-                <p>Вы также можете управлять cookie через настройки вашего браузера:</p>
-                <ul>
-                    <li><strong>Chrome:</strong> Настройки → Конфиденциальность и безопасность → Файлы cookie</li>
-                    <li><strong>Firefox:</strong> Настройки → Приватность и защита → Файлы cookie</li>
-                    <li><strong>Safari:</strong> Настройки → Конфиденциальность → Файлы cookie</li>
-                    <li><strong>Edge:</strong> Настройки → Файлы cookie и разрешения сайтов</li>
-                </ul>
-
-                <h3>5.3 Отказ от аналитических cookie</h3>
-                <p>Вы можете отказаться от Google Analytics по ссылке:</p>
-                <p>
-                    <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">
-                        https://tools.google.com/dlpage/gaoptout
-                    </a>
-                </p>
-            </div>
-
-            <div class="legal-section">
-                <h2>6. Влияние отключения cookie</h2>
+                <h2>5. Влияние отключения cookie</h2>
                 <p>Отключение различных типов cookie может повлиять на ваш опыт использования сайта:</p>
                 <ul>
                     <li><strong>Обязательные cookie:</strong> Сайт может работать некорректно</li>
@@ -243,7 +211,7 @@ include 'partials/header.php';
             </div>
 
             <div class="legal-section">
-                <h2>7. Обновления политики</h2>
+                <h2>6. Обновления политики</h2>
                 <p>
                     Мы можем время от времени обновлять эту Политику использования cookie. 
                     Дата последнего обновления указана вверху страницы. 
@@ -252,20 +220,9 @@ include 'partials/header.php';
             </div>
 
             <div class="legal-section">
-                <h2>8. Дополнительная информация</h2>
-                <p>Для получения дополнительной информации о cookie рекомендуем посетить:</p>
-                <ul>
-                    <li>
-                        <a href="https://www.allaboutcookies.org/" target="_blank" rel="noopener">
-                            All About Cookies
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://cookiepedia.co.uk/" target="_blank" rel="noopener">
-                            Cookiepedia
-                        </a>
-                    </li>
-                </ul>
+                <h2>7. Дополнительная информация</h2>
+                <p>Для получения дополнительной информации:</p>
+                
             </div>
 
             <div class="legal-contact">

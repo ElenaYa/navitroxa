@@ -11,6 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://navitroxa.com<?= $_SERVER['REQUEST_URI'] ?>">
     <link rel="canonical" href="https://navitroxa.com<?= $_SERVER['REQUEST_URI'] ?>">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +33,7 @@
             <div class="container">
                 <div class="nav-brand">
                     <a href="/" class="logo">
+                        <img src="/img/logo-nav.png" alt="Navitroxa" class="logo-image" width="28" height="28">
                         <span class="logo-text">Navitroxa</span>
                     </a>
                 </div>

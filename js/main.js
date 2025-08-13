@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeFAQ();
     initializeContactForm();
     initializeScrollEffects();
+    initializeFeaturesTabs();
     
     // Cookie Banner Functionality
     function initializeCookieBanner() {
@@ -62,6 +63,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 gtag('config', 'GA_MEASUREMENT_ID');
             };
         }
+    }
+
+    // Features tabs (replaces slider)
+    function initializeFeaturesTabs() {
+        const tabs = document.querySelectorAll('.features-tab');
+        const panels = document.querySelectorAll('.feature-panel');
+        if (!tabs.length || !panels.length) return;
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const id = tab.getAttribute('data-panel');
+                tabs.forEach(t => t.classList.toggle('active', t === tab));
+                panels.forEach(p => p.classList.toggle('active', p.getAttribute('data-id') === id));
+            });
+        });
     }
     
     // Navigation Functionality
