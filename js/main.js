@@ -7,12 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (navToggle && navMenu) {
         // Sync initial ARIA state
         navToggle.setAttribute('aria-expanded', 'false');
+        navMenu.setAttribute('aria-hidden', 'true');
         navToggle.addEventListener('click', function() {
             const willBeActive = !navMenu.classList.contains('active');
             navToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
             navToggle.setAttribute('aria-expanded', willBeActive ? 'true' : 'false');
             navToggle.setAttribute('aria-label', willBeActive ? 'Закрыть меню' : 'Открыть меню');
+            navMenu.setAttribute('aria-hidden', willBeActive ? 'false' : 'true');
         });
     }
     
@@ -39,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 navMenu.classList.remove('active');
                 navToggle.setAttribute('aria-expanded', 'false');
                 navToggle.setAttribute('aria-label', 'Открыть меню');
+                navMenu.setAttribute('aria-hidden', 'true');
             }
         }
     });
@@ -180,6 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             header.style.background = 'var(--background-color)';
             header.style.backdropFilter = 'none';
+            navMenu.setAttribute('aria-hidden', 'true');
         }
         
         lastScrollTop = scrollTop;
@@ -280,6 +284,7 @@ function animateNumber(element) {
             clearInterval(timer);
         } else {
             element.textContent = Math.floor(current) + suffix;
+            navMenu.setAttribute('aria-hidden', 'true');
         }
     }, 40);
 }

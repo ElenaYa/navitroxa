@@ -27,32 +27,35 @@
             </div>
         </div>
     </div>
+    <header class="header" role="banner">
+  <nav class="navbar" role="navigation" aria-label="Главная навигация">
+    <div class="container nav-row">
+      
+   
 
-    <header class="header">
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-brand">
-                    <a href="/" class="logo">
-                        <h2>Navitroxa</h2>
-                    </a>
-                </div>
-                
-                <div class="nav-menu" id="nav-menu">
-                    <ul class="nav-list">
-                        <li><a href="/" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Главная</a></li>
-                        <li><a href="/about.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'about.php' ? 'active' : ''; ?>">О нас</a></li>
-                        <li><a href="/solutions.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'solutions.php' ? 'active' : ''; ?>">Решения</a></li>
-                        <li><a href="/contacts.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF']) == 'contacts.php' ? 'active' : ''; ?>">Контакты</a></li>
-                    </ul>
-                </div>
-                
-                <div class="nav-toggle" id="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+      <!-- МЕНЮ: слева 2, справа 2 (десктоп); мобильное — общее раскрывающееся -->
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list nav-list-left">
+          <li><a href="/" class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='index.php'?'active':''; ?>">Главная</a></li>
+          <li><a href="/about.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='about.php'?'active':''; ?>">О нас</a></li>
+        </ul>
+        <ul class="nav-brand">
+          <a href="/" class="logo" aria-label="Navitroxa — на главную"><h2>Navitroxa</h2></a>
+        </ul>
+        <ul class="nav-list nav-list-right">
+          <li><a href="/solutions.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='solutions.php'?'active':''; ?>">Решения</a></li>
+          <li><a href="/contacts.php" class="nav-link <?php echo basename($_SERVER['PHP_SELF'])=='contacts.php'?'active':''; ?>">Контакты</a></li>
+        </ul>
+      </div>
+
+      <!-- Бургер -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Открыть меню" aria-controls="nav-menu" aria-expanded="false" type="button">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+</header>
 
     <main>
