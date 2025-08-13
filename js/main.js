@@ -531,13 +531,3 @@ document.addEventListener('visibilitychange', function() {
         clearInterval(timeTracker);
     }
 });
-
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js')
-            .then(function(registration) {
-            })
-            .catch(function(err) {
-            });
-    });
-}
