@@ -1,8 +1,6 @@
 
-// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Initialize all functionality
     initializeNavigation();
     initializeCookieBanner();
     initializeScrollAnimations();
@@ -11,34 +9,28 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollEffects();
     initializeFeaturesTabs();
     
-    // Cookie Banner Functionality
     function initializeCookieBanner() {
         const cookieBanner = document.getElementById('cookie-banner');
         const acceptBtn = document.getElementById('accept-cookies');
         const declineBtn = document.getElementById('decline-cookies');
         
-        // Check if user has already made a choice
         const cookieConsent = localStorage.getItem('cookieConsent');
         
         if (!cookieConsent) {
-            // Show banner after a short delay
             setTimeout(() => {
                 cookieBanner.classList.add('show');
             }, 1000);
         }
         
-        // Accept cookies
         if (acceptBtn) {
             acceptBtn.addEventListener('click', function() {
                 localStorage.setItem('cookieConsent', 'accepted');
                 cookieBanner.classList.remove('show');
                 
-                // Load analytics scripts here
                 loadAnalytics();
             });
         }
         
-        // Decline cookies
         if (declineBtn) {
             declineBtn.addEventListener('click', function() {
                 localStorage.setItem('cookieConsent', 'declined');
@@ -47,9 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Load analytics if cookies accepted
     function loadAnalytics() {
-        // Google Analytics
         if (typeof gtag === 'undefined') {
             const script = document.createElement('script');
             script.async = true;
@@ -65,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Features tabs (replaces slider)
     function initializeFeaturesTabs() {
         const tabs = document.querySelectorAll('.features-tab');
         const panels = document.querySelectorAll('.feature-panel');
@@ -79,24 +68,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Navigation Functionality
     function initializeNavigation() {
         const navToggle = document.getElementById('nav-toggle');
         const navMenu = document.getElementById('nav-menu');
         const navLinks = document.querySelectorAll('.nav-link');
         
-        // Mobile menu toggle
         if (navToggle) {
             navToggle.addEventListener('click', function() {
                 navToggle.classList.toggle('active');
                 navMenu.classList.toggle('active');
                 
-                // Prevent body scroll when menu is open
                 document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
             });
         }
         
-        // Close menu when clicking on nav links
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
                 navToggle.classList.remove('active');
@@ -105,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
                 navToggle.classList.remove('active');
@@ -114,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Header scroll effect
         let lastScrollTop = 0;
         const header = document.querySelector('.header');
         
@@ -133,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Scroll Animations using Intersection Observer
     function initializeScrollAnimations() {
         const animatedElements = document.querySelectorAll('[data-animate]');
         
@@ -156,7 +138,6 @@ document.addEventListener('DOMContentLoaded', function() {
             observer.observe(element);
         });
         
-        // Counter animation for statistics
         const counters = document.querySelectorAll('.stat-number, .stat-number-big, .result-number, .trust-number');
         
         const counterObserver = new IntersectionObserver(function(entries) {
@@ -173,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Counter animation function
     function animateCounter(element) {
         const target = element.textContent.trim();
         const isPercentage = target.includes('%');
@@ -181,11 +161,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const hasPlus = target.includes('+');
         const hasMinus = target.includes('-');
         
-        // Extract number
         let num = parseInt(target.replace(/[^\d]/g, ''));
         if (isNaN(num)) return;
         
-        const duration = 2000; // 2 seconds
+        const duration = 2000;
         const steps = 60;
         const increment = num / steps;
         let current = 0;
@@ -201,7 +180,6 @@ document.addEventListener('DOMContentLoaded', function() {
             let displayValue = Math.floor(current);
             let displayText = displayValue.toString();
             
-            // Add prefixes/suffixes back
             if (hasPlus) displayText = '+' + displayText;
             if (hasMinus) displayText = '-' + displayText;
             if (isPercentage) displayText += '%';
@@ -214,7 +192,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, duration / steps);
     }
     
-    // FAQ Functionality
     function initializeFAQ() {
         const faqItems = document.querySelectorAll('.faq-item');
         
@@ -225,12 +202,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 question.addEventListener('click', function() {
                     const isActive = item.classList.contains('active');
                     
-                    // Close all other FAQ items
                     faqItems.forEach(otherItem => {
                         otherItem.classList.remove('active');
                     });
                     
-                    // Toggle current item
                     if (!isActive) {
                         item.classList.add('active');
                     }
@@ -239,7 +214,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Contact Form Functionality
     function initializeContactForm() {
         const contactForm = document.getElementById('contact-form');
         
@@ -247,22 +221,18 @@ document.addEventListener('DOMContentLoaded', function() {
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 
-                // Get form data
                 const formData = new FormData(contactForm);
                 const data = Object.fromEntries(formData);
                 
-                // Validate form
                 if (!validateForm(data)) {
                     return;
                 }
                 
-                // Submit form (in a real application, this would send to server)
                 submitForm(data);
             });
         }
     }
     
-    // Form validation
     function validateForm(data) {
         const errors = [];
         
@@ -290,19 +260,15 @@ document.addEventListener('DOMContentLoaded', function() {
         return true;
     }
     
-    // Email validation
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
     
-    // Show form errors
     function showFormErrors(errors) {
-        // Remove existing error messages
         const existingErrors = document.querySelectorAll('.form-error');
         existingErrors.forEach(error => error.remove());
         
-        // Create error container
         const errorContainer = document.createElement('div');
         errorContainer.className = 'form-error';
         errorContainer.style.cssText = `
@@ -326,36 +292,27 @@ document.addEventListener('DOMContentLoaded', function() {
         
         errorContainer.appendChild(errorList);
         
-        // Insert error container at the top of the form
         const contactForm = document.getElementById('contact-form');
         contactForm.insertBefore(errorContainer, contactForm.firstChild);
         
-        // Scroll to error
         errorContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
     
-    // Submit form (mock function)
     function submitForm(data) {
         const submitButton = document.querySelector('#contact-form button[type="submit"]');
         const originalText = submitButton.innerHTML;
         
-        // Show loading state
         submitButton.innerHTML = 'Отправка...';
         submitButton.disabled = true;
         
-        // Simulate API call
         setTimeout(() => {
-            // Show success message
             showSuccessMessage();
             
-            // Reset form
             document.getElementById('contact-form').reset();
             
-            // Reset button
             submitButton.innerHTML = originalText;
             submitButton.disabled = false;
             
-            // Track form submission if analytics loaded
             if (typeof gtag !== 'undefined') {
                 gtag('event', 'form_submit', {
                     'event_category': 'Contact',
@@ -365,9 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     }
     
-    // Show success message
     function showSuccessMessage() {
-        // Remove existing messages
         const existingMessages = document.querySelectorAll('.form-success, .form-error');
         existingMessages.forEach(message => message.remove());
         
@@ -391,18 +346,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const contactForm = document.getElementById('contact-form');
         contactForm.insertBefore(successContainer, contactForm.firstChild);
         
-        // Scroll to success message
         successContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
         
-        // Auto remove after 5 seconds
         setTimeout(() => {
             successContainer.remove();
         }, 5000);
     }
     
-    // Additional scroll effects
     function initializeScrollEffects() {
-        // Parallax effect for hero section
         const heroSection = document.querySelector('.hero-section');
         if (heroSection) {
             window.addEventListener('scroll', function() {
@@ -416,7 +367,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Smooth scrolling for anchor links
         const anchorLinks = document.querySelectorAll('a[href^="#"]');
         anchorLinks.forEach(link => {
             link.addEventListener('click', function(e) {
@@ -440,7 +390,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Cookie settings function (called from cookie policy page)
     window.showCookieSettings = function() {
         const cookieBanner = document.getElementById('cookie-banner');
         if (cookieBanner) {
@@ -448,7 +397,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
-    // Lazy loading for images
     function initializeLazyLoading() {
         const images = document.querySelectorAll('img[loading="lazy"]');
         
@@ -468,16 +416,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Initialize lazy loading
     initializeLazyLoading();
     
-    // Error handling for missing elements
     window.addEventListener('error', function(e) {
-        console.log('An error occurred:', e.error);
-        // Could send error reports to analytics here
     });
     
-    // Performance optimization - debounce scroll events
     function debounce(func, wait) {
         let timeout;
         return function executedFunction(...args) {
@@ -490,21 +433,17 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
     
-    // Optimize scroll event listeners
     const optimizedScrollHandler = debounce(function() {
-        // Scroll-related logic here if needed
-    }, 16); // ~60fps
+    }, 16); 
     
     window.addEventListener('scroll', optimizedScrollHandler);
     
-    // Load analytics if cookies were previously accepted
     const cookieConsent = localStorage.getItem('cookieConsent');
     if (cookieConsent === 'accepted') {
         loadAnalytics();
     }
 });
 
-// Utility functions
 function throttle(func, delay) {
     let timeoutId;
     let lastExecTime = 0;
@@ -524,22 +463,17 @@ function throttle(func, delay) {
     };
 }
 
-// Add to cart or lead generation tracking
 function trackEvent(eventName, eventData = {}) {
-    // Google Analytics 4
     if (typeof gtag !== 'undefined') {
         gtag('event', eventName, eventData);
     }
     
-    // Facebook Pixel
     if (typeof fbq !== 'undefined') {
         fbq('track', eventName, eventData);
     }
     
-    console.log('Event tracked:', eventName, eventData);
 }
 
-// Track button clicks
 document.addEventListener('click', function(e) {
     const button = e.target.closest('.btn');
     if (button) {
@@ -554,7 +488,6 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// Track form interactions
 document.addEventListener('focus', function(e) {
     if (e.target.matches('input, textarea, select')) {
         trackEvent('form_interaction', {
@@ -565,7 +498,6 @@ document.addEventListener('focus', function(e) {
     }
 }, true);
 
-// Track scroll depth
 let maxScrollDepth = 0;
 window.addEventListener('scroll', throttle(function() {
     const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
@@ -573,7 +505,6 @@ window.addEventListener('scroll', throttle(function() {
     if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth;
         
-        // Track milestone depths
         if ([25, 50, 75, 90].includes(scrollDepth)) {
             trackEvent('scroll_depth', {
                 scroll_depth: scrollDepth,
@@ -583,36 +514,30 @@ window.addEventListener('scroll', throttle(function() {
     }
 }, 1000));
 
-// Track time on page
 let timeOnPage = 0;
 const timeTracker = setInterval(function() {
     timeOnPage += 10;
     
-    // Track time milestones (30s, 60s, 120s, 300s)
     if ([30, 60, 120, 300].includes(timeOnPage)) {
         trackEvent('time_on_page', {
             time_seconds: timeOnPage,
             page_location: window.location.pathname
         });
     }
-}, 10000); // Every 10 seconds
+}, 10000); 
 
-// Clear timer when page is hidden/closed
 document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
         clearInterval(timeTracker);
     }
 });
 
-// Service Worker registration for PWA features (optional)
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js')
             .then(function(registration) {
-                console.log('ServiceWorker registration successful');
             })
             .catch(function(err) {
-                console.log('ServiceWorker registration failed');
             });
     });
 }
