@@ -31,7 +31,10 @@ include 'partials/header.php';
         </div>
         
         <div class="services-grid">
-            <div class="service-card" data-animate>
+            <div class="service-card" id="audit" data-animate>
+                <div class="service-image">
+                    <img src="/img/service-audit.webp" alt="Аудит продаж — анализ воронки и точки роста" loading="lazy">
+                </div>
                 <div class="service-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M9 11H1l8-8 8 8h-8z"/>
@@ -41,18 +44,46 @@ include 'partials/header.php';
                 </div>
                 <h3 class="service-title">Аудит продаж</h3>
                 <p class="service-description">
-                    Глубокий анализ воронки продаж, выявление точек роста 
-                    и барьеров для конверсии
+                    Глубокий анализ воронки продаж с картированием ключевых шагов, 
+                    выявлением точек роста и барьеров для конверсии. Подготовим 
+                    приоритизированный план улучшений по методу ICE и оценим 
+                    потенциал роста в вашей нише.
                 </p>
                 <ul class="service-features">
                     <li>Анализ поведения пользователей</li>
                     <li>Исследование конкурентов</li>
                     <li>Карта клиентского пути</li>
-                    <li>Приоритизация изменений</li>
+                    <li>Приоритизация изменений и roadmap</li>
                 </ul>
+                <div class="service-badges">
+                    <span class="service-badge">UX research</span>
+                    <span class="service-badge">ICE scoring</span>
+                    <span class="service-badge">Benchmarks</span>
+                </div>
+                <div class="service-metrics">
+                    <div class="metric">
+                        <div class="metric-value">7–14 дн</div>
+                        <div class="metric-label">срок аудита</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">10–15</div>
+                        <div class="metric-label">ключевых инсайтов</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">2–3</div>
+                        <div class="metric-label">быстрых побед</div>
+                    </div>
+                </div>
+                <p class="service-note">Получите отчёт с конкретными изменениями, оценкой влияния на конверсию и планом внедрения по спринтам.</p>
+                <div class="service-cta">
+                    <a href="/contacts.php" class="btn btn-outline">Обсудить аудит</a>
+                </div>
             </div>
             
-            <div class="service-card" data-animate>
+            <div class="service-card" id="cro" data-animate>
+                <div class="service-image">
+                    <img src="/img/service-cro.webp" alt="Оптимизация конверсии — UX/UI, формы и CTA" loading="lazy">
+                </div>
                 <div class="service-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M3 3v18h18"/>
@@ -61,18 +92,45 @@ include 'partials/header.php';
                 </div>
                 <h3 class="service-title">Оптимизация конверсии</h3>
                 <p class="service-description">
-                    Научно обоснованное улучшение каждого элемента 
-                    сайта для максимальной конверсии
+                    Системная CRO: оптимизация UX/UI, форм и CTA на основе данных 
+                    и поведенческой аналитики. Запускаем цикл A/B и мультивариантных 
+                    тестов, сокращаем трение и повышаем скорость принятия решения.
                 </p>
                 <ul class="service-features">
                     <li>A/B и многовариантное тестирование</li>
                     <li>Оптимизация форм и CTA</li>
                     <li>Улучшение UX/UI</li>
-                    <li>Персонализация контента</li>
+                    <li>Персонализация контента и сегментация</li>
                 </ul>
+                <div class="service-badges">
+                    <span class="service-badge">AB tests</span>
+                    <span class="service-badge">UX writing</span>
+                    <span class="service-badge">Heuristics</span>
+                </div>
+                <div class="service-metrics">
+                    <div class="metric">
+                        <div class="metric-value">10–30</div>
+                        <div class="metric-label">тестов/квартал</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">40%+</div>
+                        <div class="metric-label">рост конверсии</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">14–21 дн</div>
+                        <div class="metric-label">TTF (первые победы)</div>
+                    </div>
+                </div>
+                <p class="service-note">Собираем гипотезы, проводим исследования, проектируем варианты и валидируем решения данными.</p>
+                <div class="service-cta">
+                    <a href="/contacts.php" class="btn btn-outline">Запустить оптимизацию</a>
+                </div>
             </div>
             
-            <div class="service-card" data-animate>
+            <div class="service-card" id="automation" data-animate>
+                <div class="service-image">
+                    <img src="/img/service-automation.webp" alt="Автоматизация процессов — CRM, воронки, чат-боты" loading="lazy">
+                </div>
                 <div class="service-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="3"/>
@@ -81,8 +139,9 @@ include 'partials/header.php';
                 </div>
                 <h3 class="service-title">Автоматизация процессов</h3>
                 <p class="service-description">
-                    Настройка систем, которые работают 24/7, 
-                    увеличивая продажи без вашего участия
+                    Встраиваем CRM, чат-боты и триггерные воронки Email/SMS, которые 
+                    работают 24/7. Снижаем стоимость лида, ускоряем обработку заявок 
+                    и возвращаем пользователей через ретаргетинг и ремаркетинг.
                 </p>
                 <ul class="service-features">
                     <li>Email и SMS воронки</li>
@@ -90,9 +149,35 @@ include 'partials/header.php';
                     <li>CRM интеграции</li>
                     <li>Автоматический ретаргетинг</li>
                 </ul>
+                <div class="service-badges">
+                    <span class="service-badge">CRM</span>
+                    <span class="service-badge">Chatbots</span>
+                    <span class="service-badge">Trigger flows</span>
+                </div>
+                <div class="service-metrics">
+                    <div class="metric">
+                        <div class="metric-value">–30%</div>
+                        <div class="metric-label">CAC</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">×2</div>
+                        <div class="metric-label">скорость ответа</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">99.9%</div>
+                        <div class="metric-label">аптайм</div>
+                    </div>
+                </div>
+                <p class="service-note">Строим автоворонки, синхронизируем каналы, обеспечиваем масштабируемость и отказоустойчивость.</p>
+                <div class="service-cta">
+                    <a href="/contacts.php" class="btn btn-outline">Автоматизировать продажи</a>
+                </div>
             </div>
             
-            <div class="service-card" data-animate>
+            <div class="service-card" id="analytics" data-animate>
+                <div class="service-image">
+                    <img src="/img/service-analytics.webp" alt="Аналитика и отчетность — дашборды и прогнозы" loading="lazy">
+                </div>
                 <div class="service-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 20V4"/>
@@ -103,8 +188,9 @@ include 'partials/header.php';
                 </div>
                 <h3 class="service-title">Аналитика и отчетность</h3>
                 <p class="service-description">
-                    Полная прозрачность результатов с детальными 
-                    отчетами и рекомендациями
+                    Настраиваем устойчивую аналитику: сбор событий, 
+                    дашборды в реальном времени и отчеты по unit-экономике. 
+                    Даем прозрачность и прогнозы, необходимые для управленческих решений.
                 </p>
                 <ul class="service-features">
                     <li>Настройка аналитики</li>
@@ -112,7 +198,127 @@ include 'partials/header.php';
                     <li>Еженедельные отчеты</li>
                     <li>Прогнозирование роста</li>
                 </ul>
+                <div class="service-badges">
+                    <span class="service-badge">Realtime</span>
+                    <span class="service-badge">Attribution</span>
+                    <span class="service-badge">Forecast</span>
+                </div>
+                <div class="service-metrics">
+                    <div class="metric">
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">наблюдаемость</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">24/7</div>
+                        <div class="metric-label">мониторинг</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">ROI</div>
+                        <div class="metric-label">сквозная аналитика</div>
+                    </div>
+                </div>
+                <p class="service-note">Корректные данные без потерь, удобные дашборды, единые метрики и коннекторы под ваши системы.</p>
+                <div class="service-cta">
+                    <a href="/contacts.php" class="btn btn-outline">Настроить аналитику</a>
+                </div>
             </div>
+        </div>
+    </div>
+</section>
+<section class="pricing-section" id="pricing">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Пакеты услуг</h2>
+            <p class="section-subtitle">
+                Выберите оптимальный вариант для вашего бизнеса
+            </p>
+        </div>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card" data-animate>
+                <div class="pricing-header">
+                    <h3 class="pricing-title">Аудит</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">2,500</span>
+                        <span class="price-currency">лв</span>
+                    </div>
+                    <p class="pricing-description">
+                        Глубокий анализ вашего сайта и рекомендации по улучшению
+                    </p>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li>Анализ воронки продаж</li>
+                        <li>Исследование пользователей</li>
+                        <li>Технический аудит</li>
+                        <li>План оптимизации</li>
+                        <li>Презентация результатов</li>
+                    </ul>
+                </div>
+                <div class="pricing-cta">
+                    <a href="/contacts.php" class="btn btn-outline">Заказать аудит</a>
+                </div>
+            </div>
+            
+            <div class="pricing-card pricing-featured" data-animate>
+                <div class="pricing-badge">Популярный</div>
+                <div class="pricing-header">
+                    <h3 class="pricing-title">Оптимизация</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">8,500</span>
+                        <span class="price-currency">лв/мес</span>
+                    </div>
+                    <p class="pricing-description">
+                        Комплексная оптимизация с гарантией результата
+                    </p>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li>Все из пакета "Аудит"</li>
+                        <li>A/B тестирование</li>
+                        <li>Оптимизация конверсии</li>
+                        <li>Еженедельные отчеты</li>
+                        <li>Прямая связь с экспертом</li>
+                        <li>Гарантия +40% конверсии</li>
+                    </ul>
+                </div>
+                <div class="pricing-cta">
+                    <a href="/contacts.php" class="btn btn-primary">Начать оптимизацию</a>
+                </div>
+            </div>
+            
+            <div class="pricing-card" data-animate>
+                <div class="pricing-header">
+                    <h3 class="pricing-title">Автоматизация</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">15,000</span>
+                        <span class="price-currency">лв/мес</span>
+                    </div>
+                    <p class="pricing-description">
+                        Полная автоматизация процессов продаж
+                    </p>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li>Все из пакета "Оптимизация"</li>
+                        <li>Настройка CRM</li>
+                        <li>Email/SMS воронки</li>
+                        <li>Чат-боты для продаж</li>
+                        <li>Интеграция с системами</li>
+                        <li>Обучение команды</li>
+                    </ul>
+                </div>
+                <div class="pricing-cta">
+                    <a href="/contacts.php" class="btn btn-outline">Обсудить проект</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="pricing-note">
+            <p>
+                <strong>Гарантия результата:</strong> Если мы не увеличим вашу конверсию минимум на 40% 
+                в течение первых 90 дней — вернем 100% стоимости услуг.
+            </p>
         </div>
     </div>
 </section>
@@ -239,99 +445,134 @@ include 'partials/header.php';
             </p>
         </div>
         
-        <div class="cases-grid">
-            <div class="case-card" data-animate>
-                <div class="case-image">
-                    <img src="/img/case-1.webp" alt="Кейс интернет-магазина" loading="lazy">
+        <div class="cases-compare" data-animate>
+            <div class="cases-row cases-row--header">
+                <div class="case-cell">
+                    <div class="case-header">
+                        <div class="case-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1 7H7L6 6z"/><path d="M7 6l-1-3H3"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+                        </div>
+                        <div class="case-category">E-commerce</div>
+                        <h3 class="case-title">Интернет-магазин электроники</h3>
+                    </div>
                 </div>
-                <div class="case-content">
-                    <div class="case-category">E-commerce</div>
-                    <h3 class="case-title">Интернет-магазин электроники</h3>
-                    <p class="case-description">
-                        Увеличили конверсию на 240% за 3 месяца через оптимизацию 
-                        карточек товаров и процесса оформления заказа
-                    </p>
-                    <div class="case-results">
-                        <div class="case-metric">
-                            <span class="metric-value">+240%</span>
-                            <span class="metric-label">Конверсия</span>
+                <div class="case-cell">
+                    <div class="case-header">
+                        <div class="case-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 15a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4"/><path d="M7 15V9a5 5 0 0 1 10 0v6"/></svg>
                         </div>
-                        <div class="case-metric">
-                            <span class="metric-value">+180%</span>
-                            <span class="metric-label">Прибыль</span>
+                        <div class="case-category">SaaS</div>
+                        <h3 class="case-title">B2B SaaS платформа</h3>
+                    </div>
+                </div>
+                <div class="case-cell">
+                    <div class="case-header">
+                        <div class="case-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5V5a2 2 0 0 1 2-2h9l5 5v11.5"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
                         </div>
+                        <div class="case-category">Образование</div>
+                        <h3 class="case-title">Онлайн‑школа</h3>
+                    </div>
+                </div>
+                <div class="case-cell">
+                    <div class="case-header">
+                        <div class="case-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h2"/><path d="M10 15h4"/></svg>
+                        </div>
+                        <div class="case-category">Финтех</div>
+                        <h3 class="case-title">Финтех стартап</h3>
                     </div>
                 </div>
             </div>
-            
-            <div class="case-card" data-animate>
-                <div class="case-image">
-                    <img src="/img/case-2.webp" alt="Кейс SaaS платформы" loading="lazy">
+
+            <div class="cases-row">
+                <div class="case-cell"><div class="case-goal">Увеличить конверсию и средний чек</div></div>
+                <div class="case-cell"><div class="case-goal">Снизить отток и повысить активацию</div></div>
+                <div class="case-cell"><div class="case-goal">Увеличить продажи курсов</div></div>
+                <div class="case-cell"><div class="case-goal">Повысить активацию и удержание</div></div>
+            </div>
+
+            <div class="cases-row">
+                <div class="case-cell">
+                    <ul class="case-actions">
+                        <li>Оптимизация карточек товаров</li>
+                        <li>Ускорение checkout</li>
+                        <li>Блоки доверия и гарантии</li>
+                    </ul>
                 </div>
-                <div class="case-content">
-                    <div class="case-category">SaaS</div>
-                    <h3 class="case-title">B2B SaaS платформа</h3>
-                    <p class="case-description">
-                        Оптимизировали воронку регистрации и снизили отток пользователей 
-                        на 65% в первые 30 дней
-                    </p>
-                    <div class="case-results">
-                        <div class="case-metric">
-                            <span class="metric-value">-65%</span>
-                            <span class="metric-label">Отток</span>
-                        </div>
-                        <div class="case-metric">
-                            <span class="metric-value">+120%</span>
-                            <span class="metric-label">LTV</span>
-                        </div>
+                <div class="case-cell">
+                    <ul class="case-actions">
+                        <li>Онбординг и пустые состояния</li>
+                        <li>Подсказки в ключевых шагах</li>
+                        <li>Триггеры возврата</li>
+                    </ul>
+                </div>
+                <div class="case-cell">
+                    <ul class="case-actions">
+                        <li>Автоворонки Email/SMS</li>
+                        <li>Социальное доказательство</li>
+                        <li>Упрощение записи</li>
+                    </ul>
+                </div>
+                <div class="case-cell">
+                    <ul class="case-actions">
+                        <li>Улучшение онбординга и KYC</li>
+                        <li>Подсказки и микровзаимодействия</li>
+                        <li>Релевантные уведомления</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="cases-row">
+                <div class="case-cell">
+                    <div class="case-metric-large">
+                        <div class="value">+240%</div>
+                        <div class="label">Конверсия</div>
+                    </div>
+                </div>
+                <div class="case-cell">
+                    <div class="case-metric-large">
+                        <div class="value">-65%</div>
+                        <div class="label">Отток</div>
+                    </div>
+                </div>
+                <div class="case-cell">
+                    <div class="case-metric-large">
+                        <div class="value">+310%</div>
+                        <div class="label">Продажи</div>
+                    </div>
+                </div>
+                <div class="case-cell">
+                    <div class="case-metric-large">
+                        <div class="value">+195%</div>
+                        <div class="label">Активация</div>
                     </div>
                 </div>
             </div>
-            
-            <div class="case-card" data-animate>
-                <div class="case-image">
-                    <img src="/img/case-3.webp" alt="Кейс образовательной платформы" loading="lazy">
-                </div>
-                <div class="case-content">
-                    <div class="case-category">Образование</div>
-                    <h3 class="case-title">Онлайн-школа</h3>
-                    <p class="case-description">
-                        Автоматизировали процесс продаж курсов и увеличили 
-                        количество покупок на 310%
-                    </p>
-                    <div class="case-results">
-                        <div class="case-metric">
-                            <span class="metric-value">+310%</span>
-                            <span class="metric-label">Продажи</span>
-                        </div>
-                        <div class="case-metric">
-                            <span class="metric-value">-80%</span>
-                            <span class="metric-label">Время на продажи</span>
-                        </div>
+
+            <div class="cases-row">
+                <div class="case-cell">
+                    <div class="case-metric-large">
+                        <div class="value">+180%</div>
+                        <div class="label">Прибыль</div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="case-card" data-animate>
-                <div class="case-image">
-                    <img src="/img/case-4.webp" alt="Кейс финтех стартапа" loading="lazy">
+                <div class="case-cell">
+                    <div class="case-metric-large">
+                        <div class="value">+120%</div>
+                        <div class="label">LTV</div>
+                    </div>
                 </div>
-                <div class="case-content">
-                    <div class="case-category">Финтех</div>
-                    <h3 class="case-title">Финтех стартап</h3>
-                    <p class="case-description">
-                        Оптимизировали процесс онбординга пользователей и повысили 
-                        активацию на 195%
-                    </p>
-                    <div class="case-results">
-                        <div class="case-metric">
-                            <span class="metric-value">+195%</span>
-                            <span class="metric-label">Активация</span>
-                        </div>
-                        <div class="case-metric">
-                            <span class="metric-value">+85%</span>
-                            <span class="metric-label">Удержание</span>
-                        </div>
+                <div class="case-cell">
+                    <div class="case-metric-large">
+                        <div class="value">-80%</div>
+                        <div class="label">Время на продажи</div>
+                    </div>
+                </div>
+                <div class="case-cell">
+                    <div class="case-metric-large">
+                        <div class="value">+85%</div>
+                        <div class="label">Удержание</div>
                     </div>
                 </div>
             </div>
@@ -339,151 +580,25 @@ include 'partials/header.php';
     </div>
 </section>
 
-<section class="testimonials-section" id="testimonials">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Отзывы клиентов</h2>
-        </div>
-        
-        <div class="testimonials-grid">
-            <div class="testimonial-card" data-animate>
-                <div class="testimonial-content">
-                    <p>
-                        "Navitroxa увеличила наши продажи на 280% за первые 2 месяца работы. 
-                        Их научный подход и внимание к деталям впечатляют."
-                    </p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-name">Анна Смирнова</div>
-                    <div class="author-position">Основатель интернет-магазина "Технодом"</div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card" data-animate>
-                <div class="testimonial-content">
-                    <p>
-                        "Команда не просто выполнила техническую работу — они стали нашими 
-                        партнерами в росте. ROI от сотрудничества составил 450%."
-                    </p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-name">Михаил Волков</div>
-                    <div class="author-position">CEO SaaS-платформы "CloudFlow"</div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card" data-animate>
-                <div class="testimonial-content">
-                    <p>
-                        "Автоматизация продаж, которую настроил Navitroxa, работает как часы. 
-                        Теперь продажи растут даже ночью, пока мы спим."
-                    </p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-name">Елена Кузнецова</div>
-                    <div class="author-position">Директор онлайн-школы "EduPro"</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="pricing-section" id="pricing">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Пакеты услуг</h2>
-            <p class="section-subtitle">
-                Выберите оптимальный вариант для вашего бизнеса
-            </p>
-        </div>
-        
-        <div class="pricing-grid">
-            <div class="pricing-card" data-animate>
-                <div class="pricing-header">
-                    <h3 class="pricing-title">Аудит</h3>
-                    <div class="pricing-price">
-                        <span class="price-amount">2,500</span>
-                        <span class="price-currency">лв</span>
-                    </div>
-                    <p class="pricing-description">
-                        Глубокий анализ вашего сайта и рекомендации по улучшению
-                    </p>
-                </div>
-                <div class="pricing-features">
-                    <ul>
-                        <li>Анализ воронки продаж</li>
-                        <li>Исследование пользователей</li>
-                        <li>Технический аудит</li>
-                        <li>План оптимизации</li>
-                        <li>Презентация результатов</li>
-                    </ul>
-                </div>
-                <div class="pricing-cta">
-                    <a href="/contacts.php" class="btn btn-outline">Заказать аудит</a>
-                </div>
-            </div>
-            
-            <div class="pricing-card pricing-featured" data-animate>
-                <div class="pricing-badge">Популярный</div>
-                <div class="pricing-header">
-                    <h3 class="pricing-title">Оптимизация</h3>
-                    <div class="pricing-price">
-                        <span class="price-amount">8,500</span>
-                        <span class="price-currency">лв/мес</span>
-                    </div>
-                    <p class="pricing-description">
-                        Комплексная оптимизация с гарантией результата
-                    </p>
-                </div>
-                <div class="pricing-features">
-                    <ul>
-                        <li>Все из пакета "Аудит"</li>
-                        <li>A/B тестирование</li>
-                        <li>Оптимизация конверсии</li>
-                        <li>Еженедельные отчеты</li>
-                        <li>Прямая связь с экспертом</li>
-                        <li>Гарантия +40% конверсии</li>
-                    </ul>
-                </div>
-                <div class="pricing-cta">
-                    <a href="/contacts.php" class="btn btn-primary">Начать оптимизацию</a>
-                </div>
-            </div>
-            
-            <div class="pricing-card" data-animate>
-                <div class="pricing-header">
-                    <h3 class="pricing-title">Автоматизация</h3>
-                    <div class="pricing-price">
-                        <span class="price-amount">15,000</span>
-                        <span class="price-currency">лв/мес</span>
-                    </div>
-                    <p class="pricing-description">
-                        Полная автоматизация процессов продаж
-                    </p>
-                </div>
-                <div class="pricing-features">
-                    <ul>
-                        <li>Все из пакета "Оптимизация"</li>
-                        <li>Настройка CRM</li>
-                        <li>Email/SMS воронки</li>
-                        <li>Чат-боты для продаж</li>
-                        <li>Интеграция с системами</li>
-                        <li>Обучение команды</li>
-                    </ul>
-                </div>
-                <div class="pricing-cta">
-                    <a href="/contacts.php" class="btn btn-outline">Обсудить проект</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="pricing-note">
-            <p>
-                <strong>Гарантия результата:</strong> Если мы не увеличим вашу конверсию минимум на 40% 
-                в течение первых 90 дней — вернем 100% стоимости услуг.
-            </p>
-        </div>
-    </div>
-</section>
-
-<?php include 'partials/footer.php'; ?>
+ 
+ <section class="cta-section" id="cta">
+     <div class="container">
+         <div class="cta-content">
+             <div class="cta-text">
+                 <h2 class="cta-title">Готовы увеличить конверсию на <span class="gradient-text">40%+</span>?</h2>
+                 <p class="cta-subtitle">Получите бесплатную консультацию и персональный план роста с быстрыми победами уже в первый месяц.</p>
+                 <ul class="service-features">
+                     <li>Экспресс-аудит и карта точек роста</li>
+                     <li>Четкий roadmap внедрения по спринтам</li>
+                     <li>Прозрачные метрики и прогнозируемый результат</li>
+                 </ul>
+             </div>
+             <div class="cta-action">
+                 <a href="/contacts.php" class="btn btn-primary btn-large">Получить консультацию <span class="btn-arrow">→</span></a>
+                 <p class="cta-note"><strong>100% бесплатно.</strong> Без обязательств и скрытых платежей.</p>
+             </div>
+         </div>
+     </div>
+ </section>
+ 
+ <?php include 'partials/footer.php'; ?>

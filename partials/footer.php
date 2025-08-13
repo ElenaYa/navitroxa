@@ -20,10 +20,10 @@
                     <div class="footer-links">
                         <h4>Услуги</h4>
                         <ul>
-                            <li><a href="/solutions.php">Аудит продаж</a></li>
-                            <li><a href="/solutions.php">Оптимизация конверсии</a></li>
-                            <li><a href="/solutions.php">Автоматизация процессов</a></li>
-                            <li><a href="/solutions.php">Аналитика и отчетность</a></li>
+                            <li><a href="/solutions.php#audit">Аудит продаж</a></li>
+                            <li><a href="/solutions.php#cro">Оптимизация конверсии</a></li>
+                            <li><a href="/solutions.php#automation">Автоматизация процессов</a></li>
+                            <li><a href="/solutions.php#analytics">Аналитика и отчетность</a></li>
                         </ul>
                     </div>
                     
